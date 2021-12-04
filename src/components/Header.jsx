@@ -1,11 +1,11 @@
-
-
 const Header = () => {
-    return (
-        <div>
-            <h1>Desde Header</h1>
-        </div>
-    )
-}
+  return (
+    <>
+      <h1 className="text-center my-3 fw-bold">
+        Seguimiento Pacientes <span className="text-primary">Veterinaria</span>
+      </h1>
+    </>
+  );
+};
 
-export default Header
+export default Header;

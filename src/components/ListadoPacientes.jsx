@@ -2,8 +2,8 @@
 
 const ListadoPacientes = () => {
     return (
-        <div>
-            <h2>Listado Pacientes</h2>
+        <div className="col-12 col-md-6 p-4 my-3">
+            <h3>Listado Pacientes</h3>
         </div>
     )
 }
