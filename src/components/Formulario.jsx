@@ -2,9 +2,9 @@ import React from "react";
 
 const Formulario = () => {
   return (
-    <div className="col-12 col-md-5 p-4 my-3 bg-white shadow-sm rounded">
-      <h3 className="text-center fw-bold">Añadir <span className="text-primary">Pacientes</span></h3>
-      <form action="" className="my-3">
+    <div className="col-12 col-md-5  my-3 ">
+      <h3 className="text-center fw-bold mb-4">Añadir <span className="text-primary">Pacientes</span></h3>
+      <form action="" className="my-4 bg-white shadow-sm rounded p-4">
           <div className="mb-3">
               <label htmlFor="mascota" className="form-label fw-bold">Nombre Mascota</label>
               <input type="text" className="form-control" id="mascota" placeholder="Nombre de la Mascota"/>
