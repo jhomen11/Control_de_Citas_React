@@ -7,12 +7,36 @@ const Formulario = () => {
   const [fecha, setFecha] = useState("");
   const [sintomas, setSintomas] = useState("");
 
+  //State para manejar las validaciones
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    //Validacion del Formulario
+    if ([mascota, propietario, email, fecha, sintomas].includes("")) {
+      setError(true);
+      return
+    }
+    setError(false)
+  };
+
   return (
     <div className="col-12 col-md-5  my-3 ">
       <h3 className="text-center fw-bold mb-4">
         Añadir <span className="text-primary">Pacientes</span>
       </h3>
-      <form action="" className="my-4 bg-white shadow-sm rounded p-4">
+      <form
+        action=""
+        className="my-4 bg-white shadow-sm rounded p-4"
+        onSubmit={handleSubmit}
+      >
+        {error && (
+          <p className="alert alert-danger p-2 text-center text-uppercase fw-bold">
+            Todos los campos son obligatorios
+          </p>
+        )}
+
         <div className="mb-3">
           <label htmlFor="mascota" className="form-label fw-bold">
             Nombre Mascota
@@ -56,10 +80,12 @@ const Formulario = () => {
           <label htmlFor="alta" className="form-label fw-bold">
             Alta
           </label>
-          <input type="date" 
-            className="form-control" id="alta"
+          <input
+            type="date"
+            className="form-control"
+            id="alta"
             value={fecha}
-            onChange={ (e) => setFecha(e.target.value) }  
+            onChange={(e) => setFecha(e.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -72,7 +98,7 @@ const Formulario = () => {
             id="sintomas"
             placeholder="Describe los sintomas"
             value={sintomas}
-            onChange={ (e) => setSintomas(e.target.value) }
+            onChange={(e) => setSintomas(e.target.value)}
           />
         </div>
         <div className=" d-grid ">
