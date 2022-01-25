@@ -8,6 +8,15 @@ const Paciente = ({ el }) => {
                 <p className="fw-bold my-2">Email: <span className="fw-normal">{el.email}</span></p>
                 <p className="fw-bold my-2">Fecha: <span className="fw-normal">{el.fecha}</span></p>
                 <p className="fw-bold my-2">Sintomas: <span className="fw-normal">{el.sintomas}</span></p>
+
+                <div className='d-flex justify-content-end mt-2'>
+                    <button type='button' className='btn btn-secondary me-2 px-4'>
+                        Editar
+                    </button>
+                    <button type='button' className='btn btn-danger me-2 px-3'>
+                        Eliminar
+                    </button>
+                </div>
             </div>
     )
 }
