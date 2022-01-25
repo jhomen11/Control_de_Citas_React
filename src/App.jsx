@@ -6,7 +6,8 @@ import ListadoPacientes from "./components/ListadoPacientes"
 function App() {
   
   const [pacientes, setPacientes] = useState([]);
-  console.log(pacientes);
+  const [pacienteEdit, setPacienteEdit] =  useState({})
+  
 
   return (
     <div className="container">
@@ -14,10 +15,14 @@ function App() {
       <div className="row mt-2">
       <Formulario 
         setPacientes={setPacientes}
+        setPacienteEdit={setPacienteEdit}
         pacientes={pacientes}
+        pacienteEdit={pacienteEdit}
+
       />
       <ListadoPacientes
         pacientes={pacientes}
+        setPacienteEdit={setPacienteEdit}
       />
       </div>
     </div>
