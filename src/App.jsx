@@ -1,4 +1,5 @@
 import { useState } from "react "
+import { useEffect } from "react/cjs/react.development";
 import Formulario from "./components/Formulario"
 import Header from "./components/Header"
 import ListadoPacientes from "./components/ListadoPacientes"
@@ -7,6 +8,21 @@ function App() {
   
   const [pacientes, setPacientes] = useState([]);
   const [pacienteEdit, setPacienteEdit] =  useState({})
+
+  //Se ejecuta para obtener lo que hay en localstorage
+  useEffect(()=>{
+    const getPacientesLs = ()=>{
+      const pacientesLs = JSON.parse(localStorage.getItem('pacientes')) ?? []
+      setPacientes(pacientesLs)
+    }
+    getPacientesLs()
+  },[])
+
+  //Se ejecuta cada vez que el componente se renderiza o cuando hay algun cambio en la variable Pacientes
+  //y mofifica los cambios en localstorage
+  useEffect(()=>{
+    localStorage.setItem('pacientes', JSON.stringify(pacientes))
+  }, [pacientes])
 
   const eliminarPaciente = (id) =>{
     const pacientesActualizados = pacientes.filter(paciente => paciente.id !== id)

@@ -55,7 +55,6 @@ const Formulario = ({ pacientes, setPacientes, pacienteEdit, setPacienteEdit }) 
     //Editar Paciente
     if(pacienteEdit.id){
       objPaciente.id = pacienteEdit.id
-      console.log(objPaciente)
 
       const pacienteActulizado = pacientes.map( pacienteState => pacienteState.id ===  pacienteEdit.id 
         ? objPaciente: pacienteState)
