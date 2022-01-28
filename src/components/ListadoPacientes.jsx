@@ -1,6 +1,6 @@
 import Paciente from "./Paciente";
 
-const ListadoPacientes = ({ pacientes, setPacienteEdit }) => {
+const ListadoPacientes = ({ pacientes, setPacienteEdit, eliminarPaciente }) => {
   return (
     <div className="col-12 col-md-6 my-3">
       {pacientes && pacientes.length ? (
@@ -10,7 +10,11 @@ const ListadoPacientes = ({ pacientes, setPacienteEdit }) => {
           </h3>
 
           {pacientes.map((el) => {
-            return <Paciente key={el.id} el={el} setPacienteEdit={setPacienteEdit} />;
+            return <Paciente key={el.id} 
+              el={el} 
+              setPacienteEdit={setPacienteEdit}
+              eliminarPaciente={eliminarPaciente}
+            />;
           })}
         </>
       ) : (

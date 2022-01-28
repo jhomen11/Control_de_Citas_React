@@ -1,6 +1,15 @@
 import React from 'react'
 
-const Paciente = ({ el, setPacienteEdit }) => {
+const Paciente = ({ el, setPacienteEdit, eliminarPaciente }) => {
+
+    const handleDelete = ()=>{
+        const respuesta = confirm("Desea eliminar este Paciente?")
+
+        if(respuesta){
+            eliminarPaciente(el.id)
+        }
+    }
+
     return (
         <div className="bg-white shadow-sm rounded p-4 my-4">
                 <p className="fw-bold my-2">Nombre: <span className="fw-normal">{el.mascota}</span></p>
@@ -13,7 +22,10 @@ const Paciente = ({ el, setPacienteEdit }) => {
                     <button type='button' className='btn btn-secondary me-2 px-4' onClick={()=>setPacienteEdit(el)}>
                         Editar
                     </button>
-                    <button type='button' className='btn btn-danger me-2 px-3'>
+                    <button type='button' 
+                        className='btn btn-danger me-2 px-3'
+                        onClick={handleDelete}
+                    >
                         Eliminar
                     </button>
                 </div>
