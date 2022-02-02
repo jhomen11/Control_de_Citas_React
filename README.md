@@ -4,7 +4,7 @@ App para llevar control de citas de pacientes de una veterinaria guardando los d
 [Visualiza Aqui, Control de citas React JS](https://amazing-sammet-2ced73.netlify.app/)
 
 <p>
-<img src="src/img/img1.png" width="600px" height="">
+<img src="src/img/img1.png" width="700px" height="">
   
 <img src="src/img/img2.png" width="400px" height="">
   
