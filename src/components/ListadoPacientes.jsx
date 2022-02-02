@@ -2,7 +2,7 @@ import Paciente from "./Paciente";
 
 const ListadoPacientes = ({ pacientes, setPacienteEdit, eliminarPaciente }) => {
   return (
-    <div className="col-12 col-md-6 my-3">
+    <div className="col-12 col-md-6 col-lg-7 my-3">
       {pacientes && pacientes.length ? (
         <>
           <h3 className="text-center fw-bold">

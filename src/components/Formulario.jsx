@@ -78,7 +78,7 @@ const Formulario = ({ pacientes, setPacientes, pacienteEdit, setPacienteEdit }) 
   };
 
   return (
-    <div className="col-12 col-md-5  my-3 ">
+    <div className="col-12 col-md-6 col-lg-5  my-3 ">
       <h3 className="text-center fw-bold mb-4">
         Añadir <span className="text-primary">Pacientes</span>
       </h3>

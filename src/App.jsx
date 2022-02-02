@@ -7,6 +7,9 @@ function App() {
   
   const [pacientes, setPacientes] = useState([]);
   const [pacienteEdit, setPacienteEdit] =  useState({})
+  const [busqueda, setBusqueda] = useState("")
+
+  console.log(busqueda)
 
   //Se ejecuta para obtener lo que hay en localstorage
   useEffect(()=>{
@@ -32,8 +35,8 @@ function App() {
 
   return (
     <div className="container">
-      <Header/>
-      <div className="row mt-2">
+      <Header setBusqueda={setBusqueda} busqueda={busqueda}/>
+      <div className="row mt-2 justify-content-center">
       <Formulario 
         setPacientes={setPacientes}
         setPacienteEdit={setPacienteEdit}
